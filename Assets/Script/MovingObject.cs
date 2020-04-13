@@ -11,11 +11,13 @@ public class MovingObject : MonoBehaviour
     public float runSpeed;//뛰는 속도
     private float applyRunSpeed;
 
+    private Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,9 @@ public class MovingObject : MonoBehaviour
         {
             applyRunSpeed = 0;
         }
+
+        animator.SetFloat("DirX", vector.x);
+        animator.SetFloat("DirY", vector.y);
 
 
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
