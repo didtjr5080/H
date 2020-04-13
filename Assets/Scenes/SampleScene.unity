@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 720345521}
   - component: {fileID: 720345520}
   - component: {fileID: 720345522}
+  - component: {fileID: 720345523}
   m_Layer: 0
   m_Name: Charator1_0
   m_TagString: Untagged
@@ -300,7 +301,22 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 0e9a99fa157ec1742ac07c185a86135e, type: 2}
   - {fileID: 7400000, guid: 56fbc9f5e51ee10479d3e692165a0587, type: 2}
+  - {fileID: 7400000, guid: 51bb4342a2a6892428e38fbaa9ab26d5, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &720345523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720345519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75000861656dc7e42925b2b12f3cf1b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.005
+  runSpeed: 1
