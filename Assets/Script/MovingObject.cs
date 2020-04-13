@@ -23,6 +23,11 @@ public class MovingObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape)) // 키 눌린 코드 신호를 받아오는것.
+        {
+            //SceneManager.LoadScene("뒤로갈 씬 이름 "); // 씬으로 이동 .
+            Application.Quit();  // 씬 종료 .(나가기)                        위씬으로 이동이나 종료기능 둘중하나 원하시는것을 사용하시면 됩니다. 
+        }
 
         if (Input.GetKey(KeyCode.Q))
         {
