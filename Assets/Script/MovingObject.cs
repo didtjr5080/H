@@ -13,11 +13,14 @@ public class MovingObject : MonoBehaviour
 
     private Animator animator;
 
+    public bool OnVector;
+
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        OnVector = false;
     }
 
     // Update is called once per frame
@@ -38,32 +41,48 @@ public class MovingObject : MonoBehaviour
             applyRunSpeed = 0;
         }
 
-        animator.SetFloat("DirX", vector.x);
-        animator.SetFloat("DirY", vector.y);
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow)) {
+            OnVector = true;
+
+
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            OnVector = false;
+        }
+
+        
 
 
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
 
             vector.Set(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), transform.position.z);
+            animator.SetFloat("DirX", vector.x);
+            animator.SetFloat("DirY", vector.y);
+
+            
+            
+            /*if (OnVector != true)
+            {
+                
+                
+            }*/
+
 
             //animator.SetBool("walking", true);//걷는 애니메이션
 
             if (vector.x != 0)
             {
                 transform.Translate(vector.x * (speed + applyRunSpeed), 0, 0);//x값 변환
-                /*if (vector.x < 0)
-                {
-                    transform.localScale = new Vector3(-scalex, scaley, scalez);//좌우반전(좌)
-                }
-                else if (vector.x > 0)
-                {
-                    transform.localScale = new Vector3(scalex, scaley, scalez);//좌우반전(우)
-                }*/
+                
+
             }
             else if (vector.y != 0)
             {
                 transform.Translate(0, vector.y * (speed + applyRunSpeed), 0);//y값 변환
+                
+
             }
 
         }
