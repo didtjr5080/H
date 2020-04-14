@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         db = GameObject.FindGameObjectWithTag("Item Database").GetComponent<itemDatabase>();
+        print(db.items);
         // 디비 변수에 "Item Database" 태그를 가진 오브젝트를 연결합니다.
         // 그리고 그 중 가져오는 컴포넌트는 "itemDatabse"라는 속성입니다.
         inventory.Add(db.items[0]);
