@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92daad3da998d214ab24ab053ee7f663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: []
 --- !u!4 &159831331
 Transform:
   m_ObjectHideFlags: 0
@@ -459,7 +460,7 @@ GameObject:
   - component: {fileID: 2070139902}
   m_Layer: 0
   m_Name: DB1
-  m_TagString: ItemDatabase
+  m_TagString: Item Database
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
