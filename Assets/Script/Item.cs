@@ -47,7 +47,7 @@ public class Item
         itemPower = power;
 
         // itemIcon 속성은 별도의 방법을 이용합니다.
-        itemIcon = Resources.Load<Texture2D>("RPG_inventory_icons" + name);
+        itemIcon = Resources.Load<Texture2D>("RPG_inventory_icons/" + name);
         // itemIcon 속성은 별도의 방법을 이용합니다.
 
         itemSpeed = speed;
