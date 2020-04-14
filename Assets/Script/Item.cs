@@ -32,6 +32,11 @@ public class Item
         // 근데 보통 옷, 무기, 퀘스트아이템 정도아닌가?
     }
 
+    public Item()
+    {
+
+    }
+
     public Item(string name, int id, string desc, int power, int speed, int defense, int evasion, ItemType type)
     // 아이템의 필요한 속성을 모두 위에 적어줍니다.(다른곳에서 받아올 예정)
     {
@@ -42,7 +47,7 @@ public class Item
         itemPower = power;
 
         // itemIcon 속성은 별도의 방법을 이용합니다.
-        itemIcon = Resources.Load<Texture2D>("ItemIcons/" + name);
+        itemIcon = Resources.Load<Texture2D>("RPG_inventory_icons" + name);
         // itemIcon 속성은 별도의 방법을 이용합니다.
 
         itemSpeed = speed;

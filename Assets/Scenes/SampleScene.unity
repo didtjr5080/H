@@ -151,6 +151,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
+  slotX: 5
+  slotY: 4
+  slots: []
+  skin: {fileID: 11400000, guid: fa4a116104f7b674f8005c2023d51c06, type: 2}
 --- !u!4 &159831331
 Transform:
   m_ObjectHideFlags: 0
